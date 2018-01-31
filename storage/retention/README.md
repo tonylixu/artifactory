@@ -19,6 +19,14 @@ This tool looks for 3 enviroment variables in order to authenticate:
 * ARTIFACTORY_PASSWORD - Password for Artifactory
 These will be loaded in at the beginning of a run and raise an exception if missing.
 
+### Installation
+From source code:
+```bash
+$ git clone https://github.com/gogoair/lavatory
+$ cd lavatory
+$ pip install -U .
+```
+
 ### Lavatory Features:
 Lavatory has the following features:
 * Uses Python plugins for repository policies. One plugin per repository that can have as much Python logic as necessary.
