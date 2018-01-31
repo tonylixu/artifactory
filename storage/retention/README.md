@@ -12,6 +12,13 @@ Retention policy is need for the following reasons:
 * Python 3.4+
 * Artifactory user with API permissions
 
+### Authentication
+This tool looks for 3 enviroment variables in order to authenticate:
+* ARTIFACTORY_URL - Base URL to use for Artifactory connections
+* ARTIFACTORY_USERNAME - Username to Artifactory
+* ARTIFACTORY_PASSWORD - Password for Artifactory
+These will be loaded in at the beginning of a run and raise an exception if missing.
+
 ### Lavatory Features:
 Lavatory has the following features:
 * Uses Python plugins for repository policies. One plugin per repository that can have as much Python logic as necessary.
