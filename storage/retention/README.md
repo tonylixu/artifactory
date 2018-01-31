@@ -8,6 +8,10 @@ Retention policy is need for the following reasons:
 * Indefinitely keeping all artifacts leads to a build up of stale or broken artifacts.
 * Cost effectie, storage never comes free.
 
+### Requirements
+* Python 3.4+
+* Artifactory user with API permissions
+
 ### Lavatory Features:
 Lavatory has the following features:
 * Uses Python plugins for repository policies. One plugin per repository that can have as much Python logic as necessary.
