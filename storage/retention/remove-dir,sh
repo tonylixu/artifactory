@@ -1,6 +1,11 @@
 #!/bin/bash
 ## A bash script that used in a Jenkins job to remove directories
 ## in a repository
+## AFSERVER: Artifactory server in domain name fomat: i.e artifactory.lixu.ca
+## START_DATE: Date in yyyy-mm-dd format: i.e 2017-10-31
+## NUM_OF_DAYS: How many days to remove: i.e 10
+## REPO: Repository name: i.e local-lixu-dev-repo
+## PATH: Directory path: java/project/daily
 
 formatted_start_dater=`echo $START_DATE | /usr/bin/tr -d _`;
 
