@@ -1,0 +1,19 @@
+#!/bin/bash
+## A bash script that used in a Jenkins job to remove directories
+## in a repository
+
+formatted_start_dater=`echo $START_DATE | /usr/bin/tr -d _`;
+
+for (( c=0; c<$NUM_OF_DAYS; c++ ))
+do
+    date=`/usr/bin/date --date="$formatted_start_dater +$c day" +%Y-%m-%d`;
+    if [ "$DRY_RUN" == "YES" ]
+        then
+        echo "Dry run...."
+        echo "Going to delete https://$AFSERVER/artifactory/$REPO/$PATH/$date"
+    else
+        echo "Deleting...https://$AFSERVER/artifactory/$REPO/$PATH/$date"
+        `/usr/bin/curl -u$AFADMIN:$AFPASSWD -X "DELETE" https://$AFSERVER/artifactory/$REPO/$PATH/$date`
+    fi
+    /usr/bin/sleep 3
+done
