@@ -1,0 +1,15 @@
+{
+    "files": [
+    {
+        "aql": {
+            "items.find": {
+                "repo": "your-reponame"
+            }
+        },
+        "include": "@",
+        "sort": {
+            "$dsc": ["name"]
+        }
+    }
+  ]
+}
